@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "eslint .",
-    "format": "prettier --write .",
-    "stylelint": "stylelint \"**/*.css\"",
+    "eslint:fix": "eslint . --fix --ignore-path .gitignore",
+    "eslint:check": "eslint .",
+    "format:fix": "prettier --write . --ignore-path .gitignore",
+    "format:check": "prettier --check . --ignore-path .gitignore",
+    "stylelint:fix": "stylelint \"styles.css\" --fix --ignore-path .gitignore",
+    "stylelint:check": "stylelint \"styles.css\" --ignore-path .gitignore",
     "prepare": "husky install"
   },
   "keywords": [],
